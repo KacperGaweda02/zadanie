@@ -35,7 +35,7 @@ public class User {
     @Column(name = "login", nullable = false)
     private final String login;
 
-    @Column(name = "passwordHash", nullable = false)
+    @Column(name = "password_hash", nullable = false)
     private final String passwordHash;
 
     @Column(name = "role")
