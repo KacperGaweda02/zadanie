@@ -61,7 +61,7 @@ public class UserController {
     }
 
     @Transactional
-    @PostMapping
+    @PostMapping(path = "/validate")
     public ResponseEntity<UserDTO> validate(@Valid @RequestBody LoginDTO login) {
         User user = userService.login(login.getLogin(), login.getPassword());
         return ResponseEntity.ok(userMapper.toDTO(user));
